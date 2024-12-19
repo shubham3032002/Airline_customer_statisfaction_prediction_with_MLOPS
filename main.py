@@ -1,22 +1,15 @@
 from src.airline.exception import customException
 from src.airline.logger import logging
-import sys
+from src.airline.pipeline.stage_01_data_ingestion import DataIngestionTrainingPipeline
 
-def div(a,b):
-    try:
-        result=a/b
-        logging.info("diving the number")
-    except Exception as e:
-        logging.error("error ocure")
-        raise customException(e,sys)
-    
-    
-    
-if __name__ == "__main__":
-    try:
-        div(10,0)    
-        
-    except customException as ce:
-        logging.error(str(ce)) 
-        raise customException(ce,sys)
+
+STAGE_NAME ="Data Ingestion Stage"
+try:
+        logging.info(f">>>>>>>>>>>>> stage {STAGE_NAME} started <<<<<<<<<<<<<<<<<<")
+        obj=DataIngestionTrainingPipeline()
+        obj.main()
+        logging.info(f">>>>>>>>>>>>>>stage {STAGE_NAME} completed <<<<<<<<<<<<<<<<<<<")
+except Exception as e:
+        logging.error(e)
+        raise(e)           
            

@@ -1,7 +1,4 @@
-DB_configuration={
-    'host':"localhost",
-    'user':'root',
-    'password':'password@123',
-    'database':'airline_database',
-    "table_name" :"train"
-}
+from pathlib import Path
+
+CONFIG_FILE_PATH=Path("config/config.yaml")
+PARAMS_FILE_PATH=Path("params.yaml")

@@ -2,7 +2,7 @@ import os
 import csv
 from src.airline.logger import logging
 from src.airline.exception import customException
-from src.airline.config.DB_configuration import MySqlDatabase
+from airline.config.configuration import MySqlDatabase
 
 
 class MySqlDataExtractor:

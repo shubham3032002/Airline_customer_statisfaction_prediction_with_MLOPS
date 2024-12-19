@@ -1,0 +1,10 @@
+artifact_root: artifacts
+
+data_ingestion:
+  root_dir: artifacts/data_ingestion
+  host: "localhost"
+  user: "root"
+  password: "password@123"
+  database: "airline_database"
+  table_name: "train"
+  local_data_file: artifacts/data_ingestion/data.csv
